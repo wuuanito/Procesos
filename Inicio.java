@@ -9,4 +9,7 @@ public class Inicio {
         ventana1.setVisible(true);
 
     }
+
+
+    
 }

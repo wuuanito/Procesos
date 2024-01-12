@@ -1,9 +1,84 @@
-public class VentanaCliente {
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JSpinner;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+
+public class VentanaCliente extends JFrame {
+
+
+    public JPanel ventanaCliente;
+    public JButton conectar;
+    public JTextField nombre;
+    public JTextField numeroPuerto;
+    public JTextArea areaCliente;
+
+    public VentanaCliente(){
+        setSize(500,300);
+        setResizable(false);
+        setTitle("Cliente");
+        setLocationRelativeTo(null);
+        inciarComponentes();
+    }
+public void inciarComponentes() {
+        panes();
+        botones();
+        etiquetas();
+    }
+
+    public void panes() {
+
+        ventanaCliente = new JPanel();
+        ventanaCliente.setLayout(null);
+        this.getContentPane().add(ventanaCliente);
+       
+
+    }
+
+    public void botones() {
+       
+    conectar = new JButton("CONNECT");
+    conectar.setBounds(300,90,130,30);
+    ventanaCliente.add(conectar);
+
+
+
+
+    }
+
+    public void etiquetas() {
+
+        JLabel titulo = new JLabel("PSP CLIENT");
+        titulo.setBounds(200, 20, 150, 30);
+        ventanaCliente.add(titulo);
+
+        JLabel nombreCliente = new JLabel("Client Name");
+        nombreCliente.setBounds(30, 60 , 100, 30);
+        ventanaCliente.add(nombreCliente);
+       nombre = new JTextField();
+       nombre.setBounds(200,60,250,30);
+       ventanaCliente.add(nombre);
+       JLabel puertJLabel = new JLabel("Port");
+       puertJLabel.setBounds(30,90, 60, 30);
+       ventanaCliente.add(puertJLabel);
+
+       numeroPuerto = new JTextField();
+       numeroPuerto.setBounds(200, 90, 70, 30);
+       ventanaCliente.add(numeroPuerto);
+
+       areaCliente = new JTextArea();
+       areaCliente.setBounds(30, 140, 350, 100);
+       ventanaCliente.add(areaCliente);
+    }
 
 
 
 
 
-    
+
     
 }
+
+

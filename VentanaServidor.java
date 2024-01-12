@@ -16,13 +16,13 @@ public class VentanaServidor extends JFrame {
     public static  JTextArea areaTexto;
     public JButton activarServer;
 
-    public  JTextField nPuerto;
+    public static  JTextField nPuerto;
 
     public VentanaServidor() {
         inciarComponentes();
         setSize(400, 700);
         setResizable(false);
-        setTitle("Inicio");
+        setTitle("Servidor");
         setLocationRelativeTo(null);
 
 
