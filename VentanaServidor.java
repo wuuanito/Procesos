@@ -9,14 +9,18 @@ import javax.swing.JPanel;
 import javax.swing.JSpinner;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
+import javax.swing.SpinnerModel;
+import javax.swing.SpinnerNumberModel;
 
 public class VentanaServidor extends JFrame {
 
     public JPanel ventanaPrincipal;
     public static  JTextArea areaTexto;
     public JButton activarServer;
+    public static  JTextField textoIncoming;
 
     public static  JTextField nPuerto;
+    public static  JSpinner spinnerClientes;
 
     public VentanaServidor() {
         inciarComponentes();
@@ -74,10 +78,11 @@ public class VentanaServidor extends JFrame {
         mensajeRecibido.setBounds(10,100,130,30);
         JLabel clientes = new JLabel("Max. Nº of Clients:");
         clientes.setBounds(10,140,150,30);
-        JSpinner spinnerClientes = new JSpinner();
+        SpinnerModel model = new SpinnerNumberModel(1, 1, 100, 1);
+        spinnerClientes = new JSpinner(model);
         spinnerClientes.setBounds(170,140,30,30);
 
-        JTextField textoIncoming = new JTextField();
+         textoIncoming = new JTextField();
         textoIncoming.setBounds(150,100,130,30);
 
         JLabel puertp = new JLabel("Port Nº");
