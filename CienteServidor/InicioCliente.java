@@ -29,7 +29,7 @@ public class InicioCliente {
                         DataInputStream flujoEntrada = new DataInputStream(entrada);
                         String recibido = flujoEntrada.readUTF();
                         ventanaCliente.areaCliente.append(recibido);
-                        
+
 
                         OutputStream enviarDatos=null;
                         enviarDatos = cliente.getOutputStream();
@@ -45,6 +45,6 @@ public class InicioCliente {
 
         } catch (Exception e) {
             e.printStackTrace();
-        } 
+        }
     }
 }

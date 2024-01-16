@@ -5,15 +5,19 @@ import javax.swing.JPanel;
 import javax.swing.JSpinner;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class VentanaCliente extends JFrame {
 
 
-    public JPanel ventanaCliente;
+    public static JPanel ventanaCliente;
     public JButton conectar;
-    public JTextField nombre;
-    public JTextField numeroPuerto;
-    public JTextArea areaCliente;
+    public static JTextField nombre;
+    public static JTextField numeroPuerto;
+    public static JTextArea areaCliente;
+
+    public JButton obtenerFecha,desconectar;
 
     public VentanaCliente(){
         setSize(500,300);
@@ -43,6 +47,11 @@ public void inciarComponentes() {
     conectar.setBounds(300,90,130,30);
     ventanaCliente.add(conectar);
 
+    obtenerFecha = new JButton("Obtner Fecha");
+    obtenerFecha.setBounds(380,120,100,30);
+    desconectar = new JButton("Salir");
+    desconectar.setBounds(380,170,100,30);
+    ventanaCliente.add(desconectar);
 
 
 
