@@ -20,7 +20,7 @@ public class Servidor extends Thread {
         try {
             socketServidor = new ServerSocket(Integer.parseInt(VentanaServidor.nPuerto.getText()));
             System.out.println("Servidor Iniciado");
-            VentanaServidor.areaTexto.setText("Servidor Iniciando..");
+            VentanaServidor.areaTexto.setText("Servidor Inicido");
 
             while (usuariosConectados < numeroMaxUsuarios && !this.isInterrupted()) {
                 Socket cliente = socketServidor.accept();

@@ -45,14 +45,6 @@ public class InicioCliente {
 
         } catch (Exception e) {
             e.printStackTrace();
-        } finally {
-            if (cliente != null && !cliente.isClosed()) {
-                try {
-                    cliente.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
+        } 
     }
 }
